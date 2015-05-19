@@ -18,4 +18,6 @@ COPY ./osm-bright.osm2pgsql.mml /usr/local/share/maps/style/osm-bright-master/os
 COPY ./configure.py /usr/local/share/maps/style/osm-bright-master/configure.py
 COPY ./setup.sh /usr/local/share/maps/style/osm-bright-master/setup.sh
 
+VOLUME ["/usr/local/share/maps/style/OSMBright"]
+
 ENTRYPOINT ["/usr/local/share/maps/style/osm-bright-master/setup.sh"]
