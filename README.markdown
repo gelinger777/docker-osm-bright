@@ -6,7 +6,7 @@ A Docker image with the [OSM-Bright](https://github.com/mapbox/osm-bright) data.
 
 Can be built from the Dockerfile:
 
-    # docker build -t openfirmware/osm-bright github.com/openfirmware/docker-osm-bright.git
+    # docker build -t gelinger777/osm-bright github.com/gelinger777/docker-osm-bright.git
 
 This currently installs OSM Bright from the master git branch.
 
@@ -18,7 +18,7 @@ You will need to pull and build my `postgres-osm` and `shapefiles` images:
 
 Then use those when creating the osm-bright container:
 
-    $ sudo docker run --volumes-from shapefiles --link postgres-osm:pg --name osm-bright openfirmware/osm-bright
+    $ sudo docker run --volumes-from shapefiles --link postgres-osm:pg --name osm-bright gelinger777/osm-bright
 
 You can configure the map extents using the `EXTENTS` environment variable. If not set, it will default to "-20037508.34,-20037508.34,20037508.34,20037508.34".
 
